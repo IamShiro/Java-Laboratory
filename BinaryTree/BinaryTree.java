@@ -20,6 +20,7 @@ public class BinaryTree{
 		else {
 			
 			this.cur_node = root;
+			this.variable = null;
 			
 			while(cur_node != null) {
 				
@@ -29,25 +30,24 @@ public class BinaryTree{
 					
 					cur_node = cur_node.getRight();
 						
-				}else {
-					
-					cur_node = cur_node.getLeft();
-					
-					}
-				if (newNode.getValue() > variable.getValue()) {
-					
-					variable.setRight(newNode);
-					
-					} 
+				}
 				else {
 					
-					variable.setLeft(newNode);
-					
+					cur_node = cur_node.getLeft();
 					}
+			}
+			
+			if (newNode.getValue() > variable.getValue()) {
 				
-				newNode.setFather(variable);
+				variable.setRight(newNode);
 				
+				} 
+			else {
+				
+				variable.setLeft(newNode);
 				}
+			
+			newNode.setFather(variable);
 			}
 		}
 	}

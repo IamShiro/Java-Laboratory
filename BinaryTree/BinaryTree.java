@@ -27,7 +27,7 @@ public class BinaryTree{
 				
 				if (newNode.getValue() > cur_node.getValue()) {
 					
-						cur_node = cur_node.getRight();
+					cur_node = cur_node.getRight();
 						
 				}else {
 					
